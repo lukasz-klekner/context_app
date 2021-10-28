@@ -1,6 +1,6 @@
 import { Component, createContext } from 'react'
 
-const ThemeContext = createContext(null)
+export const ThemeContext = createContext(null)
 
 class ThemeContextProvider extends Component {
   state = {
