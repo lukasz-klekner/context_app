@@ -1,10 +1,10 @@
-import { useContext } from 'react'
-import { BookContext } from '../context/BookContext'
-import { ThemeContext } from '../context/ThemeContext'
+import { useThemeContext } from '../context/ThemeContext'
+import { useBookContext } from '../context/BookContext'
 
 const BookList = () => {
-  const { isLightTheme, light, dark } = useContext(ThemeContext)
-  const { books } = useContext(BookContext)
+  const { isLightTheme, light, dark } = useThemeContext()
+  const { books } = useBookContext()
+
 
   const theme = isLightTheme ? light : dark
   return (

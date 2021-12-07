@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { AuthContext } from '../context/AuthContext'
-import { ThemeContext } from '../context/ThemeContext'
+import { useAuthContext } from '../context/AuthContext'
+import { useThemeContext } from '../context/ThemeContext'
 
 const Navbar = () => {
-  const { isAuthenticated, toggleAuthenticated } = useContext(AuthContext)
-  const { isLightTheme, light, dark } = useContext(ThemeContext)
+  const { isAuthenticated, toggleAuthenticated } = useAuthContext()
+  const { isLightTheme, light, dark } = useThemeContext()
 
   const theme = isLightTheme ? light : dark
   return (
